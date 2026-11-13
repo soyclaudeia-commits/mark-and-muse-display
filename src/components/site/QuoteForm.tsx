@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { submitQuote } from "@/lib/forms.functions";
 import { quoteSchema, SERVICE_TYPES, type QuoteInput } from "@/lib/forms.schema";
+import type { z } from "zod";
 import { whatsappLink } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { WhatsAppIcon } from "./WhatsAppIcon";
@@ -35,7 +36,7 @@ export function QuoteForm({ defaults, compact }: { defaults?: Partial<QuoteInput
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<QuoteInput>({
+  } = useForm<QuoteInput, unknown, z.output<typeof quoteSchema>>({
     resolver: zodResolver(quoteSchema),
     defaultValues: { service_type: "Paquete turístico", adults: 2, children: 0, ...defaults },
   });
