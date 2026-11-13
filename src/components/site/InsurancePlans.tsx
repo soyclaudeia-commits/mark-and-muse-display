@@ -53,7 +53,7 @@ export function InsurancePlans() {
               <tr key={r.label} className="border-t">
                 <td className="p-4 text-left font-medium">{r.label}</td>
                 {r.values.map((v, i) => (
-                  <td key={i} className={cn("p-4", PLANS[i].highlight && "bg-accent/60")}><Cell v={v} /></td>
+                  <td key={i} className={cn("p-4", PLANS[i]?.highlight && "bg-accent/60")}><Cell v={v} /></td>
                 ))}
               </tr>
             ))}
