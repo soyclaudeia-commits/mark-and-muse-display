@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as CotizarRouteImport } from './routes/cotizar'
+import { Route as CrucerosRouteImport } from './routes/cruceros'
+import { Route as HospedajeRouteImport } from './routes/hospedaje'
+import { Route as LibroDeReclamacionesRouteImport } from './routes/libro-de-reclamaciones'
+import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as PaquetesInternacionalesRouteImport } from './routes/paquetes-internacionales'
+import { Route as PaquetesNacionalesRouteImport } from './routes/paquetes-nacionales'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
+import { Route as SegurosDeViajeRouteImport } from './routes/seguros-de-viaje'
+import { Route as TerminosRouteImport } from './routes/terminos'
+import { Route as PaqueteSlugRouteImport } from './routes/paquete.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CotizarRoute = CotizarRouteImport.update({
+  id: '/cotizar',
+  path: '/cotizar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrucerosRoute = CrucerosRouteImport.update({
+  id: '/cruceros',
+  path: '/cruceros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HospedajeRoute = HospedajeRouteImport.update({
+  id: '/hospedaje',
+  path: '/hospedaje',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibroDeReclamacionesRoute = LibroDeReclamacionesRouteImport.update({
+  id: '/libro-de-reclamaciones',
+  path: '/libro-de-reclamaciones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosRoute = NosotrosRouteImport.update({
+  id: '/nosotros',
+  path: '/nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaquetesInternacionalesRoute = PaquetesInternacionalesRouteImport.update({
+  id: '/paquetes-internacionales',
+  path: '/paquetes-internacionales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaquetesNacionalesRoute = PaquetesNacionalesRouteImport.update({
+  id: '/paquetes-nacionales',
+  path: '/paquetes-nacionales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SegurosDeViajeRoute = SegurosDeViajeRouteImport.update({
+  id: '/seguros-de-viaje',
+  path: '/seguros-de-viaje',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TerminosRoute = TerminosRouteImport.update({
+  id: '/terminos',
+  path: '/terminos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaqueteSlugRoute = PaqueteSlugRouteImport.update({
+  id: '/paquete/$slug',
+  path: '/paquete/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/cotizar': typeof CotizarRoute
+  '/cruceros': typeof CrucerosRoute
+  '/hospedaje': typeof HospedajeRoute
+  '/libro-de-reclamaciones': typeof LibroDeReclamacionesRoute
+  '/nosotros': typeof NosotrosRoute
+  '/paquetes-internacionales': typeof PaquetesInternacionalesRoute
+  '/paquetes-nacionales': typeof PaquetesNacionalesRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/seguros-de-viaje': typeof SegurosDeViajeRoute
+  '/terminos': typeof TerminosRoute
+  '/paquete/$slug': typeof PaqueteSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/cotizar': typeof CotizarRoute
+  '/cruceros': typeof CrucerosRoute
+  '/hospedaje': typeof HospedajeRoute
+  '/libro-de-reclamaciones': typeof LibroDeReclamacionesRoute
+  '/nosotros': typeof NosotrosRoute
+  '/paquetes-internacionales': typeof PaquetesInternacionalesRoute
+  '/paquetes-nacionales': typeof PaquetesNacionalesRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/seguros-de-viaje': typeof SegurosDeViajeRoute
+  '/terminos': typeof TerminosRoute
+  '/paquete/$slug': typeof PaqueteSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/cotizar': typeof CotizarRoute
+  '/cruceros': typeof CrucerosRoute
+  '/hospedaje': typeof HospedajeRoute
+  '/libro-de-reclamaciones': typeof LibroDeReclamacionesRoute
+  '/nosotros': typeof NosotrosRoute
+  '/paquetes-internacionales': typeof PaquetesInternacionalesRoute
+  '/paquetes-nacionales': typeof PaquetesNacionalesRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/seguros-de-viaje': typeof SegurosDeViajeRoute
+  '/terminos': typeof TerminosRoute
+  '/paquete/$slug': typeof PaqueteSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contacto'
+    | '/cotizar'
+    | '/cruceros'
+    | '/hospedaje'
+    | '/libro-de-reclamaciones'
+    | '/nosotros'
+    | '/paquetes-internacionales'
+    | '/paquetes-nacionales'
+    | '/privacidad'
+    | '/seguros-de-viaje'
+    | '/terminos'
+    | '/paquete/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contacto'
+    | '/cotizar'
+    | '/cruceros'
+    | '/hospedaje'
+    | '/libro-de-reclamaciones'
+    | '/nosotros'
+    | '/paquetes-internacionales'
+    | '/paquetes-nacionales'
+    | '/privacidad'
+    | '/seguros-de-viaje'
+    | '/terminos'
+    | '/paquete/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/contacto'
+    | '/cotizar'
+    | '/cruceros'
+    | '/hospedaje'
+    | '/libro-de-reclamaciones'
+    | '/nosotros'
+    | '/paquetes-internacionales'
+    | '/paquetes-nacionales'
+    | '/privacidad'
+    | '/seguros-de-viaje'
+    | '/terminos'
+    | '/paquete/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactoRoute: typeof ContactoRoute
+  CotizarRoute: typeof CotizarRoute
+  CrucerosRoute: typeof CrucerosRoute
+  HospedajeRoute: typeof HospedajeRoute
+  LibroDeReclamacionesRoute: typeof LibroDeReclamacionesRoute
+  NosotrosRoute: typeof NosotrosRoute
+  PaquetesInternacionalesRoute: typeof PaquetesInternacionalesRoute
+  PaquetesNacionalesRoute: typeof PaquetesNacionalesRoute
+  PrivacidadRoute: typeof PrivacidadRoute
+  SegurosDeViajeRoute: typeof SegurosDeViajeRoute
+  TerminosRoute: typeof TerminosRoute
+  PaqueteSlugRoute: typeof PaqueteSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cotizar': {
+      id: '/cotizar'
+      path: '/cotizar'
+      fullPath: '/cotizar'
+      preLoaderRoute: typeof CotizarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cruceros': {
+      id: '/cruceros'
+      path: '/cruceros'
+      fullPath: '/cruceros'
+      preLoaderRoute: typeof CrucerosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hospedaje': {
+      id: '/hospedaje'
+      path: '/hospedaje'
+      fullPath: '/hospedaje'
+      preLoaderRoute: typeof HospedajeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/libro-de-reclamaciones': {
+      id: '/libro-de-reclamaciones'
+      path: '/libro-de-reclamaciones'
+      fullPath: '/libro-de-reclamaciones'
+      preLoaderRoute: typeof LibroDeReclamacionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros': {
+      id: '/nosotros'
+      path: '/nosotros'
+      fullPath: '/nosotros'
+      preLoaderRoute: typeof NosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paquetes-internacionales': {
+      id: '/paquetes-internacionales'
+      path: '/paquetes-internacionales'
+      fullPath: '/paquetes-internacionales'
+      preLoaderRoute: typeof PaquetesInternacionalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paquetes-nacionales': {
+      id: '/paquetes-nacionales'
+      path: '/paquetes-nacionales'
+      fullPath: '/paquetes-nacionales'
+      preLoaderRoute: typeof PaquetesNacionalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seguros-de-viaje': {
+      id: '/seguros-de-viaje'
+      path: '/seguros-de-viaje'
+      fullPath: '/seguros-de-viaje'
+      preLoaderRoute: typeof SegurosDeViajeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terminos': {
+      id: '/terminos'
+      path: '/terminos'
+      fullPath: '/terminos'
+      preLoaderRoute: typeof TerminosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paquete/$slug': {
+      id: '/paquete/$slug'
+      path: '/paquete/$slug'
+      fullPath: '/paquete/$slug'
+      preLoaderRoute: typeof PaqueteSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactoRoute: ContactoRoute,
+  CotizarRoute: CotizarRoute,
+  CrucerosRoute: CrucerosRoute,
+  HospedajeRoute: HospedajeRoute,
+  LibroDeReclamacionesRoute: LibroDeReclamacionesRoute,
+  NosotrosRoute: NosotrosRoute,
+  PaquetesInternacionalesRoute: PaquetesInternacionalesRoute,
+  PaquetesNacionalesRoute: PaquetesNacionalesRoute,
+  PrivacidadRoute: PrivacidadRoute,
+  SegurosDeViajeRoute: SegurosDeViajeRoute,
+  TerminosRoute: TerminosRoute,
+  PaqueteSlugRoute: PaqueteSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
