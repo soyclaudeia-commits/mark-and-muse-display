@@ -14,6 +14,57 @@ export type Database = {
   }
   public: {
     Tables: {
+      complaints: {
+        Row: {
+          address: string | null
+          amount: string | null
+          created_at: string
+          detail: string
+          document_number: string
+          document_type: string
+          email: string
+          full_name: string
+          id: string
+          kind: string
+          phone: string
+          request: string
+          service: string | null
+          status: string
+        }
+        Insert: {
+          address?: string | null
+          amount?: string | null
+          created_at?: string
+          detail: string
+          document_number: string
+          document_type?: string
+          email: string
+          full_name: string
+          id?: string
+          kind: string
+          phone: string
+          request: string
+          service?: string | null
+          status?: string
+        }
+        Update: {
+          address?: string | null
+          amount?: string | null
+          created_at?: string
+          detail?: string
+          document_number?: string
+          document_type?: string
+          email?: string
+          full_name?: string
+          id?: string
+          kind?: string
+          phone?: string
+          request?: string
+          service?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
       packages: {
         Row: {
           amenities: string[]
