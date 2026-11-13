@@ -17,7 +17,7 @@ import { WhatsAppIcon } from "./WhatsAppIcon";
 export const selectClass =
   "flex h-11 w-full rounded-lg border border-input bg-background px-3 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
 
-function Field({ label, error, children, className }: { label: string; error?: string; children: React.ReactNode; className?: string }) {
+function Field({ label, error, children, className }: { label: string; error?: string | undefined; children: React.ReactNode; className?: string }) {
   return (
     <div className={cn("space-y-1.5", className)}>
       <Label className="text-xs font-semibold uppercase tracking-wider text-foreground/80">{label}</Label>

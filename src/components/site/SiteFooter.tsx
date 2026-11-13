@@ -66,7 +66,6 @@ export function SiteFooter() {
       <div className="border-t border-ink-foreground/10">
         <div className="container-km flex flex-col items-center justify-between gap-2 py-5 text-xs text-ink-foreground/50 sm:flex-row">
           <span>© {new Date().getFullYear()} {SITE.legalName} · RUC {SITE.ruc}</span>
-          <Link to="/admin" className="hover:text-ink-foreground">Acceso administrador</Link>
         </div>
       </div>
     </footer>

@@ -28,7 +28,7 @@ const bare = "h-7 border-0 p-0 shadow-none focus-visible:ring-0 text-sm font-med
 
 export function QuickQuote() {
   const navigate = useNavigate();
-  const [tab, setTab] = useState(TABS[0]);
+  const [tab, setTab] = useState(TABS[0]!);
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
